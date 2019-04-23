@@ -1,4 +1,10 @@
-Feature: Belly
-#asdf
-  Scenario: a few cukes
-    Given I have 42 cukes in my belly
+Feature: Weather
+
+  Scenario: Check weather
+    When I retrieve current weather information
+    Then I have 3 counties weather information
+
+
+  Scenario: Check weather test 2
+    When I retrieve current weather information
+    Then I have 3 counties weather information

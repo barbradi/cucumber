@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
 	id 'java'
 }
 
@@ -7,20 +7,32 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'org.santander.cucumber'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
-project.ext {
-	cucumberVersion = '4.2.5'
-}
 
 repositories {
 	mavenCentral()
 }
 
+bootJar {enabled = false}
+
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	compile 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	testCompile 'io.cucumber:cucumber-java:' + cucumberVersion
-	testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
+	compile 'com.fasterxml.jackson.core:jackson-databind'
+
+	compile 'io.cucumber:cucumber-java:4.2.5'
+	compile 'io.cucumber:cucumber-junit:4.2.5'
+	compile 'io.rest-assured:rest-assured'
+	compile 'org.projectlombok:lombok'
+
+	// json unit
+	compile 'net.javacrumbs.json-unit:json-unit-assertj:2.6.1'
+
+	// spring
+	compile 'io.cucumber:cucumber-spring:4.2.5'
+
+	// parallel
+	compile 'io.github.prashant-ramcharan:courgette-jvm:3.3.0'
 }

@@ -1,0 +1,21 @@
+{
+  "date":"${json-unit.regex}^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}",
+  "counties":[
+    {
+      "name":"Buckinghamshire",
+      "temperature":3,
+      "raining":false
+    },
+    {
+      "name":"Bedfordshire",
+      "temperature":5,
+      "raining":false
+    },
+    {
+      "name":"Cambridgeshire",
+      "temperature":4,
+      "raining":true
+    }
+
+  ]
+}
