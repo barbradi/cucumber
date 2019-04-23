@@ -1,0 +1,41 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "a few cukes",
+        "description": "",
+        "id": "belly;a-few-cukes",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 780274,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I have 42 cukes in my belly",
+            "match": {
+              "arguments": [
+                {
+                  "val": "42",
+                  "offset": 7
+                }
+              ],
+              "location": "Stepdefs.I_have_cukes_in_my_belly(int)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "Belly",
+    "description": "",
+    "id": "belly",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/demo.feature",
+    "tags": []
+  }
+]

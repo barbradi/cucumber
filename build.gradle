@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.santander.cucumber'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+project.ext {
+	cucumberVersion = '4.2.5'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	testCompile 'io.cucumber:cucumber-java:' + cucumberVersion
+	testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
+}
