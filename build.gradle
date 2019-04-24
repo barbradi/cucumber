@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
 	id 'java'
 }
 
@@ -7,7 +7,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'org.santander.cucumber'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 
 repositories {
@@ -29,6 +29,8 @@ dependencies {
 
 	// json unit
 	compile 'net.javacrumbs.json-unit:json-unit-assertj:2.6.1'
+	compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8'
+	testCompile 'org.assertj:assertj-core:3.11.1'
 
 	// spring
 	compile 'io.cucumber:cucumber-spring:4.2.5'
